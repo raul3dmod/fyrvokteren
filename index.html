@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#d9a48e" />
   <title>Glødevokteren</title>
-  <script type="module" crossorigin src="./assets/index-B5fC-hBW.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-D0AoBw8j.css">
+  <script type="module" crossorigin src="./assets/index-DIdUL7oY.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bgl_xbhr.css">
 </head>
 <body>
   <canvas id="game"></canvas>
 
   <div id="hud">
     <div class="stat" id="hud-lights" title="Glødenivå">🔥 <b>20</b><span>/20</span></div>
+    <div class="stat" id="hud-chill" title="Chill (vokterens liv)">😌 <b>100</b></div>
     <div class="stat" id="hud-embers" title="Glør">✦ <b>0</b></div>
     <div class="stat" id="hud-wave">Bølge <b>0</b><span>/10</span></div>
     <div class="stat timer" id="hud-timer"></div>
@@ -23,16 +24,21 @@
   <button id="btn-quality" title="Grafikk-kvalitet (G)">Høy</button>
   <div id="pause" class="hidden"><div class="card">
     <h1>Pause</h1><p class="lead" id="pause-keys"></p>
-    <div class="menu-row"><button id="btn-resume">Fortsett</button><button id="btn-restart" class="alt">↺ Start kartet på nytt</button><button id="btn-worlds" class="alt">🌍 Bytt verden</button></div>
+    <div class="menu-row"><button id="btn-resume">Fortsett</button><button id="btn-restart" class="alt">↺ Start kartet på nytt</button><button id="btn-worlds" class="alt">🌍 Bytt verden</button><button id="btn-lex" class="alt">📖 Fiende-leksikon</button></div>
+    <div id="lex" class="hidden"></div>
     <label class="music-row">🎶 Musikk <input id="music-vol" type="range" min="0" max="100" value="70" /> <button id="btn-mute" class="alt small">M: på</button></label>
     <div id="confirm" class="hidden"><p class="lead">Sikker? Bølge, tårn og glør nullstilles.</p><div class="menu-row"><button id="btn-yes">Ja, start på nytt</button><button id="btn-no" class="alt">Nei</button></div></div>
   </div></div>
   <div id="hint"></div>
 
   <div id="build-panel" class="hidden">
-    <button data-tower="ring"><i>1</i> Røykring-kanon <em>22 ✦</em><small>rask · bakke + luft</small></button>
-    <button data-tower="chips"><i>2</i> Chips-mørtel <em>38 ✦</em><small>splash · kun bakke</small></button>
-    <button data-tower="speaker"><i>3</i> Reggae-høyttaler <em>30 ✦</em><small>bremser i ring</small></button>
+    <button data-tower="ring"><i>1</i><b>💨</b><span>Røykring-kanon</span><em>22 ✦</em><small>rask · bakke + luft</small></button>
+    <button data-tower="chips"><i>2</i><b>🥔</b><span>Chips-mørtel</span><em>38 ✦</em><small>splash · kun bakke</small></button>
+    <button data-tower="speaker"><i>3</i><b>🔊</b><span>Reggae-høyttaler</span><em>30 ✦</em><small>bremser i ring</small></button>
+    <button data-tower="bubble"><i>4</i><b>🫧</b><span>Bobleblåser</span><em>20 ✦</em><small>fanger flyvere · kun luft</small></button>
+    <button data-tower="kite"><i>5</i><b>🪁</b><span>Papirdrage</span><em>40 ✦</em><small>sone, lang · kun luft</small></button>
+    <button data-tower="pizza"><i>6</i><b>🍕</b><span>Pizza-katapult</span><em>55 ✦</em><small>lang splash · kun bakke</small></button>
+    <button data-tower="lamp"><i>7</i><b>🌋</b><span>Lavalampe</span><em>50 ✦</em><small>aura, bremser alt</small></button>
   </div>
 
   <div id="touch" class="hidden">

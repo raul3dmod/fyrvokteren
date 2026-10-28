@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#d9a48e" />
   <title>Glødevokteren</title>
-  <script type="module" crossorigin src="./assets/index-CE23I5FJ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-8eISGLdG.css">
+  <script type="module" crossorigin src="./assets/index-BzUXNqom.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BtYTHSNv.css">
 </head>
 <body>
   <canvas id="game"></canvas>
@@ -20,13 +20,17 @@
   <div id="fps">— fps</div>
   <button id="btn-pause" title="Pause">⏸</button>
   <button id="btn-quality" title="Grafikk-kvalitet (G)">Høy</button>
-  <div id="pause" class="hidden"><div class="card"><h1>Pause</h1><p class="lead" id="pause-keys"></p><button id="btn-resume">Fortsett</button></div></div>
+  <div id="pause" class="hidden"><div class="card">
+    <h1>Pause</h1><p class="lead" id="pause-keys"></p>
+    <div class="menu-row"><button id="btn-resume">Fortsett</button><button id="btn-restart" class="alt">↺ Start kartet på nytt</button><button id="btn-worlds" class="alt">🌍 Bytt verden</button></div>
+    <div id="confirm" class="hidden"><p class="lead">Sikker? Bølge, tårn og glør nullstilles.</p><div class="menu-row"><button id="btn-yes">Ja, start på nytt</button><button id="btn-no" class="alt">Nei</button></div></div>
+  </div></div>
   <div id="hint"></div>
 
   <div id="build-panel" class="hidden">
-    <button data-tower="ring"><i>1</i> Røykring-kanon <em>30 ✦</em><small>rask · bakke + luft</small></button>
-    <button data-tower="chips"><i>2</i> Chips-mørtel <em>50 ✦</em><small>splash · kun bakke</small></button>
-    <button data-tower="speaker"><i>3</i> Reggae-høyttaler <em>40 ✦</em><small>bremser i ring</small></button>
+    <button data-tower="ring"><i>1</i> Røykring-kanon <em>22 ✦</em><small>rask · bakke + luft</small></button>
+    <button data-tower="chips"><i>2</i> Chips-mørtel <em>38 ✦</em><small>splash · kun bakke</small></button>
+    <button data-tower="speaker"><i>3</i> Reggae-høyttaler <em>30 ✦</em><small>bremser i ring</small></button>
   </div>
 
   <div id="touch" class="hidden">
@@ -44,11 +48,11 @@
       <p class="lead">På toppen av det gamle fyret ulmer øyas stolthet, en kjempe-joint som har glødd i hundre år. Nå marsjerer Forbudsdirektoratet i land med stempler, talerstoler og komitéer for å slukke den. Du er vokteren: chill dem ned, sank glørne de mister, og hold gløden i live gjennom ti bølger.</p>
       <ul>
         <li><b>Gå:</b> WASD / piltaster, klikk på bakken, joystick eller venstre stikke · <b>Zoom:</b> scroll / klyp / LT-RT · <b>Kamera:</b> høyreklikk-dra / høyre stikke</li>
-        <li><b>Bygg</b> tårn på steinsoklene: still deg ved en sokkel og trykk 1 / 2 / 3, eller velg med Q/R (LB/RB) og trykk B (Ⓐ / ✕ / A)</li>
+        <li><b>Bygg</b> tårn på steinsoklene: still deg ved en sokkel og trykk 1 / 2 / 3, eller velg med Z/X (LB/RB) og trykk B (Ⓐ / ✕ / A)</li>
         <li>Chillede fiender mister <b>glør</b> som slukner etter noen sekunder. Løp og hent dem!</li>
         <li><b>Bær</b> (E / mellomrom / Ⓑ / ○ / B): hent <b>rullepapir</b> ved fyret (30 ✦) og bær det til et tårn for å oppgradere (maks nivå 3)</li>
         <li>Hver fiende som når fyret slukker litt av gløden (20 punkter). Moralpanikk-måker kan slå deg ut.</li>
-        <li>Pause: Esc / Start · Grafikk Høy/Lav: G eller knappen oppe til høyre · Alle kontroller virker samtidig.</li>
+        <li>Pause: Esc / Start · Start kartet på nytt: R / Select (View, −) · Grafikk Høy/Lav: G eller knappen oppe til høyre · Alle kontroller virker samtidig.</li>
       </ul>
       <div id="worlds"></div>
       <button id="btn-start">Tenn gløden</button>

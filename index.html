@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#9fb4c0" />
+  <title>Fyrvokteren</title>
+  <script type="module" crossorigin src="./assets/index-DNplQrRr.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-HKzOAACC.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div class="stat" id="hud-lights" title="Lysflammer">🔥 <b>20</b><span>/20</span></div>
+    <div class="stat" id="hud-embers" title="Glør">✦ <b>0</b></div>
+    <div class="stat" id="hud-wave">Bølge <b>0</b><span>/10</span></div>
+    <div class="stat timer" id="hud-timer"></div>
+  </div>
+  <div id="fps">— fps</div>
+  <button id="btn-pause" title="Pause">⏸</button>
+  <div id="pause" class="hidden"><div class="card"><h1>Pause</h1><p class="lead" id="pause-keys"></p><button id="btn-resume">Fortsett</button></div></div>
+  <div id="hint"></div>
+
+  <div id="build-panel" class="hidden">
+    <button data-tower="harpoon"><i>1</i> Harpun <em>30 ✦</em><small>rask · bakke + luft</small></button>
+    <button data-tower="mortar"><i>2</i> Mørtel <em>50 ✦</em><small>splash · kun bakke</small></button>
+    <button data-tower="horn"><i>3</i> Tåkehorn <em>40 ✦</em><small>bremser i ring</small></button>
+  </div>
+
+  <div id="touch" class="hidden">
+    <div id="stick"><div id="knob"></div></div>
+    <div id="buttons">
+      <button id="btn-next" class="hidden">Neste bølge ▶</button>
+      <button id="btn-build">Bygg</button>
+      <button id="btn-carry">Bær</button>
+    </div>
+  </div>
+
+  <div id="overlay">
+    <div class="card">
+      <h1>Fyrvokteren</h1>
+      <p class="lead">Tåka ruller inn, og havet sender opp sine krypdyr. Hold lyset i fyret brennende gjennom ti bølger.</p>
+      <ul>
+        <li><b>Gå:</b> WASD / piltaster, klikk på bakken, joystick eller venstre stikke · <b>Zoom:</b> scroll / klyp / LT-RT · <b>Kamera:</b> høyreklikk-dra / høyre stikke</li>
+        <li><b>Bygg</b> tårn på de gamle steinsoklene: still deg ved en sokkel og trykk 1 / 2 / 3, eller velg med Q/R (LB/RB) og trykk B (Ⓐ / ✕ / A)</li>
+        <li>Monstre etterlater <b>glør</b> som slukner etter noen sekunder. Løp og hent dem!</li>
+        <li><b>Bær</b> (E / mellomrom / Ⓑ / ○ / B): hent en fyrstein i fyret (30 ✦) og bær den til et tårn for å oppgradere (maks nivå 3)</li>
+        <li>Pause: Esc / Start · Alle kontroller virker samtidig, også Xbox-, PlayStation- og Switch-kontroller.</li>
+        <li>Hvert monster som når fyret slukker én av 20 flammer. Måker kan slå deg i bakken.</li>
+      </ul>
+      <button id="btn-start">Tenn lykta</button>
+    </div>
+  </div>
+  <div id="rotate">Snu telefonen til liggende ↻</div>
+
+</body>
+</html>

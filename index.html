@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#d9a48e" />
   <title>Glødevokteren</title>
-  <script type="module" crossorigin src="./assets/index-BMLaCChE.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CR0iTrtv.css">
+  <script type="module" crossorigin src="./assets/index-DsPn-F6x.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BnB7qtc8.css">
 </head>
 <body>
   <canvas id="game"></canvas>
@@ -69,6 +69,26 @@
       </ul>
       <div id="worlds"></div>
       <button id="btn-start">Tenn gløden</button>
+      <button id="btn-net" class="alt">🌐 Spill sammen</button>
+      <div id="net" class="hidden" data-state="idle">
+        <label class="net-name">Navn <input id="net-name" maxlength="14" placeholder="Vokter" autocomplete="off"></label>
+        <div class="menu-row net-pick">
+          <button id="net-host" class="alt">Lag rom</button>
+          <span class="net-or">eller</span>
+          <input id="net-code-in" maxlength="4" placeholder="KODE" autocomplete="off" autocapitalize="characters" spellcheck="false">
+          <button id="net-join" class="alt">Bli med</button>
+        </div>
+        <div id="net-share" class="hidden">
+          <div class="net-code">Rom <b id="net-code">····</b></div>
+          <div class="menu-row"><input id="net-link" readonly><button id="net-copy" class="alt small">Kopier lenke</button></div>
+        </div>
+        <p id="net-status"></p>
+        <ul id="net-players"></ul>
+        <div class="menu-row net-act">
+          <button id="net-go" disabled>Start (venter på andre …)</button>
+          <button id="net-leave" class="alt small">Forlat</button>
+        </div>
+      </div>
     </div>
   </div>
   <div id="rotate"><div>
